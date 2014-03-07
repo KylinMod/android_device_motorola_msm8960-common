@@ -42,7 +42,8 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    DevicePerformanceSettingsHelper
+    DevicePerformanceSettingsHelper \
+    sqlite3
 
 # Symlinks
 PRODUCT_PACKAGES += \
@@ -82,7 +83,8 @@ PRODUCT_COPY_FILES += \
 # Media config
 ifeq ($(TARGET_USES_MOTOROLA_MSM8960_COMMON_MEDIA_PROFILES),true)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml
+    $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/config/media_profiles_xt90x.xml:system/etc/media_profiles_xt90x.xml
 endif
 
 # Media codecs
